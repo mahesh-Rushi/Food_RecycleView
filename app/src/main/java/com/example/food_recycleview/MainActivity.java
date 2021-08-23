@@ -32,8 +32,10 @@ public class MainActivity extends AppCompatActivity {
         RecipeAdaper adaper = new RecipeAdaper(list,this);
         recyclerView.setAdapter(adaper);
 
-        LinearLayoutManager layoutManager =new LinearLayoutManager(this);
+        LinearLayoutManager layoutManager =new LinearLayoutManager(this ,LinearLayoutManager.HORIZONTAL , false);
         recyclerView.setLayoutManager(layoutManager);
 
+       /* LinearLayoutManager layoutManager =new LinearLayoutManager(this );
+        recyclerView.setLayoutManager(layoutManager);*/
     }
 }
