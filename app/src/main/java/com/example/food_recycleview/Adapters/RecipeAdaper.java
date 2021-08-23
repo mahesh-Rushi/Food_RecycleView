@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -39,6 +40,56 @@ public class RecipeAdaper extends RecyclerView.Adapter<RecipeAdaper.viewHolder> 
         RecepiModel model = list.get(position);
         holder.imageView.setImageResource(model.getPic());
         holder.textView.setText(model.getText());
+
+
+        switch (position){
+
+            case 0:
+                holder.imageView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+
+                        Toast.makeText(context,"Image one is clicked",Toast.LENGTH_LONG).show();
+
+                    }
+                });
+
+
+                holder.textView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Toast.makeText(context,"click your own product",Toast.LENGTH_LONG).show();
+                    }
+                });
+
+                break;
+
+
+
+            case 1:
+                holder.imageView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+
+                        Toast.makeText(context,"Image two is clicked",Toast.LENGTH_LONG).show();
+
+                    }
+                });
+
+
+                holder.textView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Toast.makeText(context,"click your own product",Toast.LENGTH_LONG).show();
+                    }
+                });
+
+                break;
+            default:
+        }
+
+
+
 
     }
 

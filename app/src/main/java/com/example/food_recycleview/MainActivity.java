@@ -1,6 +1,7 @@
 package com.example.food_recycleview;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -23,17 +24,23 @@ public class MainActivity extends AppCompatActivity {
 
      ArrayList <RecepiModel> list = new ArrayList<>();
      list.add(new RecepiModel(R.drawable.img2, "Bugger"));
-     list.add(new RecepiModel(R.drawable.img3, "Bugger"));
-     list.add(new RecepiModel(R.drawable.img4, "Bugger"));
-     list.add(new RecepiModel(R.drawable.img1, "Bugger"));
+     list.add(new RecepiModel(R.drawable.img3, "Pizza"));
+     list.add(new RecepiModel(R.drawable.img4, "Sweet"));
+     list.add(new RecepiModel(R.drawable.img1, "Pizza"));
      list.add(new RecepiModel(R.drawable.img2, "Bugger"));
+     list.add(new RecepiModel(R.drawable.img3, "Sweet"));
+     list.add(new RecepiModel(R.drawable.img3, "Pizza"));
      list.add(new RecepiModel(R.drawable.img3, "Bugger"));
+     list.add(new RecepiModel(R.drawable.img3, "Sweet"));
 
         RecipeAdaper adaper = new RecipeAdaper(list,this);
         recyclerView.setAdapter(adaper);
 
-        LinearLayoutManager layoutManager =new LinearLayoutManager(this ,LinearLayoutManager.HORIZONTAL , false);
-        recyclerView.setLayoutManager(layoutManager);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(this,2);
+        recyclerView.setLayoutManager(gridLayoutManager);
+
+//        LinearLayoutManager layoutManager =new LinearLayoutManager(this ,LinearLayoutManager.HORIZONTAL , false);
+//        recyclerView.setLayoutManager(layoutManager);
 
        /* LinearLayoutManager layoutManager =new LinearLayoutManager(this );
         recyclerView.setLayoutManager(layoutManager);*/

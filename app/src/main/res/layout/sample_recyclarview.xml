@@ -31,7 +31,7 @@
               android:layout_height="match_parent"
               android:background="#F44336"
               android:text="Text View"
-              android:textSize="25dp"
+              android:textSize="15dp"
               android:textColor="@color/white"
               android:gravity="center">
           </TextView>
