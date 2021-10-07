@@ -49,7 +49,7 @@ public class RecipeAdaper extends RecyclerView.Adapter<RecipeAdaper.viewHolder> 
                     @Override
                     public void onClick(View view) {
 
-                        Toast.makeText(context,"Image one is clicked",Toast.LENGTH_LONG).show();
+                        Toast.makeText(context,"Thank you for click the Image",Toast.LENGTH_LONG).show();
 
                     }
                 });
